@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/todo_list/static/css/main.e6c13ad2.css",
-    "main.js": "/todo_list/static/js/main.04e7497e.js",
+    "main.css": "/todo_list/static/css/main.77f537dd.css",
+    "main.js": "/todo_list/static/js/main.199ddeba.js",
+    "static/media/bg-desktop-light.jpg": "/todo_list/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todo_list/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "static/media/icon-check-blue.png": "/todo_list/static/media/icon-check-blue.fb8c725df74c206adb53.png",
     "index.html": "/todo_list/index.html",
-    "main.e6c13ad2.css.map": "/todo_list/static/css/main.e6c13ad2.css.map",
-    "main.04e7497e.js.map": "/todo_list/static/js/main.04e7497e.js.map"
+    "static/media/icon-sun.svg": "/todo_list/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
+    "static/media/icon-moon.svg": "/todo_list/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "main.77f537dd.css.map": "/todo_list/static/css/main.77f537dd.css.map",
+    "main.199ddeba.js.map": "/todo_list/static/js/main.199ddeba.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.04e7497e.js"
+    "static/css/main.77f537dd.css",
+    "static/js/main.199ddeba.js"
   ]
 }
