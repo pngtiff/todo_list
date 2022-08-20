@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+  
+body {
+  margin: 0;
+  font-family: 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 18px;
+}
+
+main {
+  margin: auto;
+  background-color: white;
+  height: 100vh;
+}
+
+main.dark {
+  background-color: hsl(240, 13%, 14%);
+}
+
+header {
+  width: 100vw;
+  height: 230px;
+  background: url('./images/bg-desktop-light.jpg') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header.dark {
+  background: url('./images/bg-desktop-dark.jpg') no-repeat center/cover;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    background: url('./images/bg-mobile-light.jpg') no-repeat center cover;
+  }
+
+  header.dark {
+    background: url('./images/bg-mobile-dark.jpg') no-repeat center cover;
+  }
+}
+
+.headerContainer {
+  width: 70vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+header h1 {
+  color: white;
+  letter-spacing: 1rem;
+}
+
+
+#todoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  top: 120px;
+}
+
+#newTodo {
+  width: 70%;
+  display: flex;
+  background-color: white;
+  border-radius: 3px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 1px 5px 8px 1px hsl(232, 11%, 60%);
+}
+
+.dark #newTodo {
+  /* background-color: hsl(237, 14%, 26%); */
+  background-color: hsl(237, 17%, 20%);
+}
+
+#todoItemsList {
+  width: 70%;
+  background-color: white;
+  border-radius: 3px;
+  /* margin-bottom: 1rem; */
+  box-shadow: 1px 7px 8px 1px hsl(232, 11%, 60%);
+}
+
+.dark #todoItemsList {
+  /* background-color: hsl(237, 14%, 26%); */
+  background-color: hsl(237, 17%, 20%);
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid hsl(234, 11%, 52%);
+}
+
+.circle {
+  min-width: 25px;
+  height: 25px;
+  border: 1px solid hsl(234, 11%, 52%);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.todoItem:not(.checked) .circle:hover {
+  border: double 2px transparent;
+  background-image: linear-gradient(white,white), radial-gradient(circle at top left, #57ddff,#c058f3);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.dark .todoItem:not(.checked) .circle:hover {
+  background-image: linear-gradient(hsl(237, 14%, 26%),hsl(237, 14%, 26%)), radial-gradient(circle at top left, #a6c0fe,#f68084);
+}
+
+.checked .circle {
+  border: none;
+  background-image: url('./images/icon-check.svg'), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.05rem;
+  padding-left: 0.5rem;
+  /* color: hsl(237, 14%, 26%); */
+  color: hsl(237, 17%, 20%);
+  background-color: white;
+  outline: none;
+  border: none;
+}
+
+/* input:focus {
+  color:hsl(240, 13%, 14%)
+} */
+
+.checked input {
+  text-decoration: line-through;
+  color: hsl(233, 11%, 84%)
+}
+
+.dark input {
+  background-color: hsl(237, 17%, 20%);;
+  color: white;
+}
+
+.dark .checked input {
+  color: hsl(233, 14%, 35%)
+}
+
+.cross {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.todoItem:hover .cross {
+  background: url('./images/icon-cross.svg') no-repeat center/cover;
+}
+
+#listDetails, #filters {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0 0 3px 3px;
+  color: hsl(234, 11%, 52%);
+  box-shadow: 1px 7px 8px 1px hsl(232, 11%, 60%);
+}
+
+#filters {
+  font-weight: bold;
+}
+
+.dark #listDetails, .dark #filters {
+  /* background-color: hsl(237, 14%, 26%); */
+  background-color: hsl(237, 17%, 20%);
+}
+
+#listDetails div {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  font-weight: bold;
+}
+
+.currentList {
+  color:hsl(220, 98%, 61%)
+}
+
+#listDetails div p:hover, .clear:hover, #filters p:hover {
+  cursor: pointer;
+  color: hsl(237, 14%, 26%)
+}
+
+.dark #listDetails div p:hover, .dark .clear:hover, .dark #filters p:hover  {
+  color: white
+}
+
+#filters {
+  justify-content: space-around;
+  margin-top: 1rem;
+  box-shadow: 1px 7px 8px 1px hsl(232, 11%, 60%);
+  border-radius: 3px;
+  /* border-top: 1px solid hsl(234, 11%, 52%); */
+}
+
+#direction {
+  margin-block: 4rem;
+  text-align: center;
+  width: 100%;
+  font-size: 0.95rem;
+  color: hsl(234, 11%, 52%);
+}
