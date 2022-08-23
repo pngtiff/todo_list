@@ -10,10 +10,10 @@ function Todo(props) {
 
     const [todos, setTodos] = React.useState(
         () => JSON.parse(localStorage.getItem("todos")) || 
-        [{id: '1', body: 'Complete Todo App', completed: false},
+        [{id: '1', body: 'Complete Todo App', completed: true},
         {id: '2', body: 'Pick up groceries', completed: false},
         {id: '3', body: 'Read for 1 hour', completed: false},
-        {id: '4', body: 'Daily yoga', completed: false},
+        {id: '4', body: 'Daily yoga', completed: true},
         {id: '5', body: 'Complete Google PM course', completed: false}]
     )
 
